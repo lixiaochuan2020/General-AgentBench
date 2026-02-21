@@ -91,6 +91,13 @@ For the exact LiteLLM model routes used in experiments, see [general_agent/scrip
 | --------- | ---------------------------------- |
 | `search`  | Serper (Google Search API wrapper) |
 
+## 📚 Citation
+
+If you find this work or code useful, please consider citing:
+
+```bibtex
+
+```
 
 ## 📝 License
 
