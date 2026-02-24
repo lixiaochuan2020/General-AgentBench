@@ -3,7 +3,9 @@ Benchmark Test-Time Scaling of General LLM Agents
 </h1>
 
 <div align="center">
-<a href="https://xiaochuanli.com/">Xiaochuan Li</a>¹, <a href="https://github.com/Nozom1466">Ryan Ming</a>¹, <a href="https://www.linkedin.com/in/pranavsetlur/">Pranav Setlur</a>¹, <a href="https://www.linkedin.com/in/abhijay-paladugu/">Abhijay Paladugu</a>¹, <a href="https://www.linkedin.com/in/andy-tang-aa37b7237/">Andy Tang</a>¹, <a href="https://www.linkedin.com/in/haok1402/">Hao Kang</a>¹, <a href="https://scholar.google.com/citations?user=Rw4NiLAAAAAJ&hl=en">Shuai Shao</a>², <a href="https://scholar.google.com/citations?hl=zh-CN&user=CS5uNscAAAAJ&view_op=list_works&sortby=pubdate">Rong Jin</a>², <a href="https://www.cs.cmu.edu/~cx/">Chenyan Xiong</a>¹
+<a href="https://xiaochuanli.com/">Xiaochuan Li</a>¹, <a href="https://github.com/Nozom1466">Ryan Ming</a>¹, <a href="https://www.linkedin.com/in/pranavsetlur/">Pranav Setlur</a>¹, <a href="https://www.linkedin.com/in/abhijay-paladugu/">Abhijay Paladugu</a>¹, <a href="https://www.linkedin.com/in/andy-tang-aa37b7237/">Andy Tang</a>¹, <a href="https://www.linkedin.com/in/haok1402/">Hao Kang</a>¹, 
+  
+<a href="https://scholar.google.com/citations?user=Rw4NiLAAAAAJ&hl=en">Shuai Shao</a>², <a href="https://scholar.google.com/citations?hl=zh-CN&user=CS5uNscAAAAJ&view_op=list_works&sortby=pubdate">Rong Jin</a>², <a href="https://www.cs.cmu.edu/~cx/">Chenyan Xiong</a>¹
 
 ¹ Language Technology Institute, Carnegie Mellon University  
 ² Meta
@@ -12,9 +14,9 @@ Benchmark Test-Time Scaling of General LLM Agents
 
 <div align="center">
 
-[![arXiv](https://img.shields.io/badge/arXiv-TODO-b31b1b.svg?style=flat)](TODO)
+[![arXiv](https://img.shields.io/badge/arXiv-2602.18998-b31b1b.svg?style=flat)](http://arxiv.org/abs/2602.18998)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat)](./LICENSE)
-[![Website](https://img.shields.io/badge/Website-TODO-blue.svg?style=flat)](TODO)
+[![Website](https://img.shields.io/badge/Website-GeneralAgentBench-blue.svg?style=flat)](https://general-agentbench.github.io/)
 
 </div>
 
@@ -96,7 +98,7 @@ For the exact LiteLLM model routes used in experiments, see [general_agent/scrip
 If you find this work or code useful, please consider citing:
 
 ```bibtex
-
+coming soon
 ```
 
 ## 📝 License
