@@ -141,7 +141,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 AGENT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 # Path to calculate_sequential_scores.py
-SCORES_SCRIPT="$AGENT_DIR/scripts/000_sequential_scaling/calculate_sequential_scores.py"
+SCORES_SCRIPT="$AGENT_DIR/scripts/calculate_sequential_scores.py"
 
 # ========================  Usage  ========================
 usage() {

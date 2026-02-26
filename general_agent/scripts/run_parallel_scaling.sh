@@ -102,8 +102,8 @@ DRY_RUN="no"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 AGENT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-# Path to calculate_best_at_k.py
-BESTK_SCRIPT="$AGENT_DIR/scripts/000_parallel_scaling/calculate_best_at_k.py"
+# Path to calculate_parallel_scale_scores.py
+BESTK_SCRIPT="$AGENT_DIR/scripts/calculate_parallel_scale_scores.py"
 
 # ========================  Usage  ========================
 usage() {

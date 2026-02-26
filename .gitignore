@@ -214,6 +214,13 @@ general_agent/*
 !general_agent/data/swebench_test_50.json
 !general_agent/data/tau2bench_benchmark.json
 !general_agent/data/terminalbench_benchmark.json
+general_agent/data/_tmp_*
+general_agent/data/mcpbench_by_domain/
+general_agent/data/scripts/
+general_agent/data/seq_search/
+general_agent/data/swe_terminal_config.json
+general_agent/data/test/
+general_agent/data/unified_benchmark.json
 # Keep traces folder (selected traces for publication)
 !general_agent/traces/
 !general_agent/traces/**
@@ -225,6 +232,9 @@ general_agent/scripts/*
 !general_agent/scripts/run_parallel_scaling.sh
 !general_agent/scripts/run_pointwise_self_choice.sh
 !general_agent/scripts/run_sequential_scaling.sh
+!general_agent/scripts/calculate_parallel_scale_scores.py
+!general_agent/scripts/calculate_self_choice_scores.py
+!general_agent/scripts/calculate_sequential_scores.py
 !general_agent/scripts/README.md
 !general_agent/scripts/models.py
 

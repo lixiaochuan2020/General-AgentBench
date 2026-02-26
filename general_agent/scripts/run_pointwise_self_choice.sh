@@ -53,9 +53,8 @@ DRY_RUN="no"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 AGENT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-# Paths to analysis scripts
-BESTK_SCRIPT="$AGENT_DIR/scripts/001_self_choice/calculate_per_datapoint_best_at_k.py"
-RETAIN_SCRIPT="$AGENT_DIR/scripts/001_self_choice/calculate_score_retain.py"
+# Path to unified self-choice scores script
+SELF_CHOICE_SCRIPT="$AGENT_DIR/scripts/calculate_self_choice_scores.py"
 
 # ========================  Usage  ========================
 usage() {
@@ -263,12 +262,8 @@ build_eval_command() {
     echo "${cmd[*]}"
 }
 
-build_bestk_command() {
-    echo "python3 $BESTK_SCRIPT --input-dir $OUTPUT_DIR --benchmark $BENCHMARK --num-passes $NUM_PASSES"
-}
-
-build_retain_command() {
-    echo "python3 $RETAIN_SCRIPT --result_dir $(dirname "$OUTPUT_DIR") --specific_folder $(basename "$OUTPUT_DIR")"
+build_self_choice_command() {
+    echo "python3 $SELF_CHOICE_SCRIPT --result-dir $(dirname "$OUTPUT_DIR") --specific-folder $(basename "$OUTPUT_DIR")"
 }
 
 # ========================  Environment Setup  ========================
@@ -357,43 +352,25 @@ fi
 if [[ "$SKIP_ANALYSIS" != "yes" ]]; then
     echo
     echo "=============================================="
-    echo "[INFO] Post-Processing: Best@K Analysis"
+    echo "[INFO] Post-Processing: Self-Choice Scores (self_choice_score@k + self_choice_best@k)"
     echo "=============================================="
 
-    BESTK_CMD=$(build_bestk_command)
-    echo "[INFO] Command: $BESTK_CMD"
+    SC_CMD=$(build_self_choice_command)
+    echo "[INFO] Command: $SC_CMD"
 
     if [[ "$DRY_RUN" == "yes" ]]; then
         echo "[DRY_RUN] Skipping execution."
-    elif [[ -f "$BESTK_SCRIPT" ]]; then
-        eval "$BESTK_CMD" || echo "[WARNING] Best@K calculation failed (non-fatal)"
+    elif [[ -f "$SELF_CHOICE_SCRIPT" ]]; then
+        eval "$SC_CMD" || echo "[WARNING] Self-choice scores calculation failed (non-fatal)"
     else
-        echo "[WARNING] Best@K script not found: $BESTK_SCRIPT"
-        echo "[INFO]    Skipping Best@K analysis."
-    fi
-
-    echo
-    echo "=============================================="
-    echo "[INFO] Post-Processing: score_retain@K"
-    echo "=============================================="
-
-    RETAIN_CMD=$(build_retain_command)
-    echo "[INFO] Command: $RETAIN_CMD"
-
-    if [[ "$DRY_RUN" == "yes" ]]; then
-        echo "[DRY_RUN] Skipping execution."
-    elif [[ -f "$RETAIN_SCRIPT" ]]; then
-        eval "$RETAIN_CMD" || echo "[WARNING] score_retain calculation failed (non-fatal)"
-    else
-        echo "[WARNING] score_retain script not found: $RETAIN_SCRIPT"
-        echo "[INFO]    Skipping score_retain analysis."
+        echo "[WARNING] Self-choice script not found: $SELF_CHOICE_SCRIPT"
+        echo "[INFO]    Skipping self-choice analysis."
     fi
 
 elif [[ "$DRY_RUN" == "yes" ]]; then
     echo
     echo "[DRY_RUN] Analysis commands:"
-    echo "  $(build_bestk_command)"
-    echo "  $(build_retain_command)"
+    echo "  $(build_self_choice_command)"
 fi
 
 # ========================  Summary  ========================

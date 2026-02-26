@@ -127,7 +127,7 @@ When `--sequential-reuse` is set, the 100k run will look for the 80k checkpoint 
 ## 3. Pointwise Self-Choice (`run_pointwise_self_choice.sh`)
 
 Use the model itself as a judge to evaluate each trajectory independently.
-Produces `self_choice_best_at_k` and `score_retain_at_k` metrics.
+Produces `self_choice_score@k` and `self_choice_best@k` metrics.
 
 ```bash
 # Evaluate parallel scaling results
@@ -150,9 +150,8 @@ Produces `self_choice_best_at_k` and `score_retain_at_k` metrics.
 ```
 results/001_self_choice/
   Qwen3-235B_search_distraction_all_selfchoice/
-    evaluations/       # per-task per-pass judge results
-    summary.json       # self_choice_best_at_k for k=1..K
-    retain_score.json  # score_retain_at_k for k=1..K
+    evaluations/              # per-task per-pass judge results
+    self_choice_scores.json   # self_choice_score@k + self_choice_best@k + oracle_best@k
 ```
 
 **Key flags:**
@@ -269,7 +268,7 @@ Run a model on one or more benchmarks with sensible defaults. This is the simple
 1. Parallel Scaling  ──►  2. Pointwise Self-Choice
         │                          │
         │                          ▼
-        │                  summary.json + retain_score.json
+                           self_choice_scores.json
         │
         └──────────────►  3. Pairwise Self-Choice (Bump Sort)
                                    │
