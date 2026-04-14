@@ -98,7 +98,12 @@ For the exact LiteLLM model routes used in experiments, see [general_agent/scrip
 If you find this work or code useful, please consider citing:
 
 ```bibtex
-coming soon
+@article{li2026benchmark,
+  title={Benchmark Test-Time Scaling of General LLM Agents},
+  author={Li, Xiaochuan and Ming, Ryan and Setlur, Pranav and Paladugu, Abhijay and Tang, Andy and Kang, Hao and Shao, Shuai and Jin, Rong and Xiong, Chenyan},
+  journal={arXiv preprint arXiv:2602.18998},
+  year={2026}
+}
 ```
 
 ## 📝 License
