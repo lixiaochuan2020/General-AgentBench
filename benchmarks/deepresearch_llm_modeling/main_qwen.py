@@ -38,7 +38,7 @@ class LLMAgent:
 
         self.client = OpenAI(
             api_key='EMPTY',
-            base_url="http://babel-8-17:8000/v1"
+            base_url="http://your-node-name:8000/v1"
         )
 
         self.model_name = self.client.models.list().data[0].id
