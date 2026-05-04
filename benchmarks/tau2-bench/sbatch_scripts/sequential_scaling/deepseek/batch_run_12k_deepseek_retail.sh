@@ -96,7 +96,3 @@ echo "[INFO] All models and trials completed at $(date)"
 echo "[INFO] Total trials per model: $NUM_TRIALS"
 echo "[INFO] Total domains per trial: ${#DOMAINS[@]} (${DOMAINS[*]})"
 echo "[INFO] Total simulations per model: $((NUM_TRIALS * ${#DOMAINS[@]}))"
-
-
-
-# cd /home/tianshim/agentic-long-bench/tau2-bench/data/simulations/results/simulation_4000_DeepSeek-V3.2/trial_1/budget_4000_huggingface/deepseek-ai/ && python3 -c "import json; data=json.load(open('DeepSeek-V3.2-Exp:novita_trial1_airline_lite.json.json')); task_ids = [sim['task_id'] for sim in data['simulations']]; from collections import Counter; counts = Counter(task_ids); print('Task ID run counts:'); [print(f'  Task {tid}: {count} times') for tid, count in sorted(counts.items())]"
