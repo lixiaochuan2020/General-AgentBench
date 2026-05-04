@@ -1,7 +1,5 @@
 # SWE-Bench Instructions
 
-> **Note**: Docker is not supported by Babel, so this assumes using AWS or a local computer.
-
 ## Overview
 
 This guide provides instructions for setting up and running the SWE-Bench benchmark using the modified OpenHands repository with custom enhancements for improved reasoning capabilities.
@@ -16,8 +14,7 @@ This repository includes several key enhancements to improve reasoning capabilit
 
 ## Installation
 
-The OpenHands repository with custom edits is available at:
-https://github.com/cxcscmu/directed_research/blob/main/agentic_long_sequence_bench/OpenHands
+Refer to the OpenHands project.
 
 ## Requirements
 
@@ -156,11 +153,11 @@ Some models require cross-region inference profiles (prefix model ID with `us.`)
 ### Using vLLM for Local Models
 
 To run local models with vLLM, you need to:
-1. Start a vLLM server on a GPU cluster (e.g., Babel)
+1. Start a vLLM server on a GPU cluster
 2. Create an SSH tunnel from your AWS instance to the vLLM server
 3. Configure OpenHands to use the vLLM endpoint
 
-#### Step 1: Start vLLM Server on Babel
+#### Step 1: Start vLLM Server on server
 
 Create a SLURM batch script to start the vLLM server. The example below uses the Qwen3-Coder-30B model with 8 L40S GPUs:
 
@@ -178,12 +175,12 @@ Create a SLURM batch script to start the vLLM server. The example below uses the
 #SBATCH --time=20:00:00
 
 # Activate the vLLM environment
-export PATH="/home/andyt/.local/bin:$PATH"
-source /home/andyt/vllm-env/bin/activate
+export PATH="/home/your namet/.local/bin:$PATH"
+source /home/your namet/vllm-env/bin/activate
 
 # Configure HuggingFace cache directory (use a location with sufficient disk space)
-export HF_HOME="/data/user_data/andyt/hf_cache"
-export HUGGINGFACE_HUB_CACHE="/data/user_data/andyt/hf_cache"
+export HF_HOME="/data/user_data/your namet/hf_cache"
+export HUGGINGFACE_HUB_CACHE="/data/user_data/your namet/hf_cache"
 mkdir -p "$HF_HOME"
 
 # Allow extending the model's max context length beyond default
@@ -196,7 +193,7 @@ HOST="0.0.0.0"
 SERVER_URL="http://${HOSTNAME}:${PORT}"
 
 # Save server URL to file for easy reference
-echo "$SERVER_URL" > /home/andyt/vllm/vllm_server_url.txt
+echo "$SERVER_URL" > /home/your namet/vllm/vllm_server_url.txt
 echo "vLLM server will be running at: $SERVER_URL"
 
 # Verify GPU availability
@@ -230,16 +227,15 @@ python -m vllm.entrypoints.openai.api_server \
 
 Submit the job with: `sbatch vllm_server.sh`
 
-#### Step 2: Set Up SSH Tunnel from AWS to Babel
+#### Step 2: Set Up SSH Tunnel from AWS to your serevr
 
-Once the vLLM server is running, check the output file to find the node name (e.g., `babel-p9-24`), then create an SSH tunnel from your AWS instance:
+Once the vLLM server is running, check the output file to find the node name, then create an SSH tunnel from your AWS instance:
 
 ```bash
-ssh -L 8002:babel-p9-24:8001 andyt@login.babel.cs.cmu.edu
-```
+ssh -L 8002:node name your email
 
 This command forwards:
-- Local port `8002` (on AWS) → `babel-p9-24:8001` (vLLM server on Babel)
+- Local port `8002` (on AWS) → `node name` (vLLM server on your server)
 
 Keep this SSH connection open while running evaluations.
 
