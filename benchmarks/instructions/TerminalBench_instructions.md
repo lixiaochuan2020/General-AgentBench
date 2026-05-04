@@ -2,9 +2,6 @@
 
 Instructions for running TerminalBench with custom Terminus agent.
 
-For additional information, you may find simple instructions in the README here:
-https://github.com/cxcscmu/directed_research/blob/main/agentic_long_sequence_bench/terminal-bench/README.md
-
 ## API Key Setup
 
 Before running TerminalBench, you need to set up your LLM API key:
@@ -79,7 +76,7 @@ chmod 700 ~/.ssh
 
 # Configure SSH to disable strict host key checking
 cat > ~/.ssh/config <<EOF
-Host login.babel.cs.cmu.edu
+Host your address
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
     ServerAliveInterval 60
@@ -89,22 +86,20 @@ chmod 600 ~/.ssh/config
 
 # Start SSH tunnel in the background using sshpass with SSH_PASSWORD
 echo "Starting SSH tunnel with password authentication"
-nohup sshpass -p "$SSH_PASSWORD" ssh -f -N -L 8002:babel-n9-32:8001 andyt@login.babel.cs.cmu.edu \
+nohup sshpass -p "$SSH_PASSWORD" ssh -f -N -L 8002:your server name:8001 your email \
     -o ExitOnForwardFailure=yes > /tmp/ssh-tunnel.log 2>&1 || true
 
 # Give the tunnel a moment to establish
 sleep 2
 
 # Log tunnel status
-if pgrep -f "ssh.*8002:babel-n9-32:8001" > /dev/null; then
+if pgrep -f "ssh.*8002:your address:8001" > /dev/null; then
     echo "SSH tunnel established successfully on port 8002"
 else
     echo "Warning: SSH tunnel may not have started. Check /tmp/ssh-tunnel.log for details"
     cat /tmp/ssh-tunnel.log 2>/dev/null || true
 fi
 ```
-
-Replace with your servers/ports and your babel username.
 
 Also add the following lines to the end of the _env function in openhands_agent.py:
 ```python
@@ -142,7 +137,6 @@ tb run --agent openhands --model huggingface/novita/deepseek-ai/DeepSeek-V3.2-Ex
 ## Additional Information
 
 ### OpenHands Version
-For OpenHands, this downloads a version of OpenHands from here: https://github.com/andytang02/OpenHands-terminal-bench
 
 This fixes a bug where it doesn't output the trajectories when there is an error.
 
