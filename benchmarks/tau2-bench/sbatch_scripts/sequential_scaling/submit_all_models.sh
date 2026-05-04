@@ -134,25 +134,25 @@ done
 
 
 
-# 5806222        cpu                tau2_deepseek_airline_32k   tianshim PD       0:00     1 (QOSMaxJobsPerUserLi
-# 5806221        cpu                 tau2_deepseek_retail_22k   tianshim PD       0:00     1 (QOSMaxJobsPerUserLi
-# 5806220        cpu                tau2_deepseek_airline_22k   tianshim PD       0:00     1 (QOSMaxJobsPerUserLi
-# 5804541        cpu                tau2_deepseek_telecom_22k   tianshim  R    6:57:46     1          babel-v9-24
-# 5804543        cpu                 tau2_deepseek_retail_32k   tianshim  R    6:57:46     1          babel-v9-24
-# 5804544        cpu                tau2_deepseek_telecom_32k   tianshim  R    6:57:46     1          babel-x5-28
-# 5806211        cpu                      tau2_qwen_retail_8k   tianshim  R       0:26     1          babel-x5-20
-# 5806189        cpu        8trials_deepseek_airline_trial5_6   tianshim  R       4:28     1          babel-v9-16
-# 5806179        cpu         8trials_deepseek_retail_trial1_2   tianshim  R       5:28     1          babel-n5-16
-# 5806180        cpu         8trials_deepseek_retail_trial3_4   tianshim  R       5:28     1          babel-v9-24
-# 5806181        cpu         8trials_deepseek_retail_trial5_6   tianshim  R       5:28     1          babel-w9-22
-# 5806182        cpu         8trials_deepseek_retail_trial7_8   tianshim  R       5:28     1          babel-x5-28
-# 5806183        cpu        8trials_deepseek_telecom_trial1_2   tianshim  R       5:28     1          babel-v9-16
-# 5804184      debug                                     bash   tianshim  R    8:20:43     1          babel-p9-28
-# 5806212    general                  tau2_deepseek_retail_4k   tianshim  R       0:26     1          babel-o5-16
-# 5806213    general                 tau2_deepseek_airline_8k   tianshim  R       0:26     1          babel-p5-24
-# 5806214    general                  tau2_deepseek_retail_8k   tianshim  R       0:26     1          babel-p9-20
-# 5806215    general                 tau2_deepseek_telecom_8k   tianshim  R       0:26     1          babel-q5-16
-# 5806216    general                 tau2_deepseek_retail_12k   tianshim  R       0:26     1          babel-s5-24
-# 5806217    general                tau2_deepseek_airline_16k   tianshim  R       0:26     1          babel-t5-24
-# 5806218    general                 tau2_deepseek_retail_16k   tianshim  R       0:26     1          babel-n9-24
-# 5806219    general                tau2_deepseek_telecom_16k   tianshim  R       0:26     1          babel-n9-24
+# 5806222        cpu                tau2_deepseek_airline_32k   your name PD       0:00     1 (QOSMaxJobsPerUserLi
+# 5806221        cpu                 tau2_deepseek_retail_22k   your name PD       0:00     1 (QOSMaxJobsPerUserLi
+# 5806220        cpu                tau2_deepseek_airline_22k   your name PD       0:00     1 (QOSMaxJobsPerUserLi
+# 5804541        cpu                tau2_deepseek_telecom_22k   your name  R    6:57:46     1          your node namev
+# 5804543        cpu                 tau2_deepseek_retail_32k   your name  R    6:57:46     1          your node namev
+# 5804544        cpu                tau2_deepseek_telecom_32k   your name  R    6:57:46     1          your node namex
+# 5806211        cpu                      tau2_qwen_retail_8k   your name  R       0:26     1          your node namex
+# 5806189        cpu        8trials_deepseek_airline_trial5_6   your name  R       4:28     1          your node namev
+# 5806179        cpu         8trials_deepseek_retail_trial1_2   your name  R       5:28     1          your node namen
+# 5806180        cpu         8trials_deepseek_retail_trial3_4   your name  R       5:28     1          your node namev
+# 5806181        cpu         8trials_deepseek_retail_trial5_6   your name  R       5:28     1          your node namew
+# 5806182        cpu         8trials_deepseek_retail_trial7_8   your name  R       5:28     1          your node namex
+# 5806183        cpu        8trials_deepseek_telecom_trial1_2   your name  R       5:28     1          your node namev
+# 5804184      debug                                     bash   your name  R    8:20:43     1          your node namep
+# 5806212    general                  tau2_deepseek_retail_4k   your name  R       0:26     1          your node nameo
+# 5806213    general                 tau2_deepseek_airline_8k   your name  R       0:26     1          your node namep
+# 5806214    general                  tau2_deepseek_retail_8k   your name  R       0:26     1          your node namep
+# 5806215    general                 tau2_deepseek_telecom_8k   your name  R       0:26     1          your node nameq
+# 5806216    general                 tau2_deepseek_retail_12k   your name  R       0:26     1          your node names
+# 5806217    general                tau2_deepseek_airline_16k   your name  R       0:26     1          your node namet
+# 5806218    general                 tau2_deepseek_retail_16k   your name  R       0:26     1          your node namen
+# 5806219    general                tau2_deepseek_telecom_16k   your name  R       0:26     1          your node namen
