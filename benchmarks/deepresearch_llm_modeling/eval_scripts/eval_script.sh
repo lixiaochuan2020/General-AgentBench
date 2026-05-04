@@ -10,7 +10,7 @@
 #SBATCH --error=logs/%x-%j.err
 #SBATCH --output=logs/%x-%j.out
 #SBATCH --mail-type=END
-#SBATCH --mail-user=psetlur@andrew.cmu.edu
+#SBATCH --mail-user=youemail
 
 echo "Running on hosts: $SLURM_NODELIST"
 echo "Running on $SLURM_NNODES nodes."
