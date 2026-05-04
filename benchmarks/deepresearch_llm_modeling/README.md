@@ -2,7 +2,7 @@
 
 ### 1. Data Preparation
 
-Please Orgnize your test data into format like [this file](https://github.com/cxcscmu/deepresearch_llm_modeling/blob/main/evaluation/report/glaive/test.json). Data must have field `'id'` and '`question`'.
+Data must have field `'id'` and '`question`'.
 
 ### 2. Model Deployment
 
@@ -15,7 +15,7 @@ self.client = OpenAI(
             )
 ```
 
-Note: If you are using Qwen3 series mode, please enable the thinking mode. You may also add rope scaling for context issue. See a example deployment scripts [here](https://github.com/cxcscmu/deepresearch_llm_modeling/blob/main/scripts/serve_1.7b.sh).
+Note: If you are using Qwen3 series mode, please enable the thinking mode. You may also add rope scaling for context issue.
 
 ### 3. Run the Agent
 
@@ -94,7 +94,7 @@ Finally, follow the instructions [here](https://github.com/hiyouga/LLaMA-Factory
 
 ### 2. Run SFT
 
-First, set your configuration in a .yaml file. [Here](https://github.com/cxcscmu/deepresearch_llm_modeling/blob/main/train/sft/sft_6.yaml) is a example config file for reference.
+First, set your configuration in a .yaml file.
 
 Then, start SFT by:
 
