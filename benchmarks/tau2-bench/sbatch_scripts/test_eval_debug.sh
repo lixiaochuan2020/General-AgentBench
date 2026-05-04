@@ -8,7 +8,7 @@
 set -e
 source ~/miniconda3/bin/activate tau2bench
 
-cd /home/tianshim/agentic-long-bench/tau2-bench
+cd /home/your-home-dir/agentic-long-bench/tau2-bench
 
 echo "[INFO] Script started at $(date)"
 echo "[INFO] Running on node: $(hostname)"
