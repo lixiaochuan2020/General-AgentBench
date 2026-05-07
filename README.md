@@ -1,5 +1,5 @@
 <h1 align="center">
-Benchmark Test-Time Scaling of General LLM Agents
+Evaluating Test-Time Scaling of General LLM Agents
 </h1>
 
 <div align="center">
@@ -10,14 +10,14 @@ Anonymous Authors
 
 ## ❓ Is Test-Time Scaling as Effective as You Think?
 
-<table align="center">
+<!-- <table align="center">
   <tr>
     <td align="center"><img src="assets/sequential_scaling.png" width="380" alt="Sequential test-time scaling" /><br><b>(a)</b> Sequential test-time scaling</td>
     <td align="center"><img src="assets/parallel_scaling.png" width="380" alt="Parallel test-time scaling" /><br><b>(b)</b> Parallel test-time scaling</td>
   </tr>
-</table>
+</table> -->
 
-- **Sequential scaling** hits a **context ceiling**: performance initially improves with more interaction turns, but then plateaus and even declines as the growing context destabilizes the agent.
+- **Sequential scaling** hits a **scaling plateau**: performance initially improves with more interaction turns, but then plateaus and even declines as the growing context destabilizes the agent.
 - **Parallel scaling** suffers from a **verifiability gap**: while pass@K grows steadily with more samples, self-choice accuracy remains nearly flat — agents cannot reliably identify the correct trajectory among candidates.
 
 
@@ -31,7 +31,7 @@ Anonymous Authors
   <b>Top:</b> Absolute performance. <b>Bottom:</b> Relative performance degradation under the general-agent setting.</p>
 </div>
 
-- Using General AgentBench, we systematically study test-time scaling behaviors under **sequential scaling** (iterative interaction) and **parallel scaling** (sampling multiple trajectories).  We find that neither scaling methodology yields effective performance improvements in practice, due to two fundamental limitations: **context ceiling** in sequential scaling and **verification gap** in parallel scaling.
+- Using General AgentBench, we systematically study test-time scaling behaviors under **sequential scaling** (iterative interaction) and **parallel scaling** (sampling multiple trajectories).  We find that neither scaling methodology yields effective performance improvements in practice, due to two fundamental limitations: **scaling plateau** in sequential scaling and **verification gap** in parallel scaling.
 
 
 
